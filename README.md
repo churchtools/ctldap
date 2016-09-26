@@ -1,5 +1,10 @@
-#CT-LDAP-Server v-2.1
+#CT-LDAP-Server v0.2
 
+This product is a wrapper for ChurchTools, so ChurchTools can be used as a LDAP Server.
+
+**This product is currently in beta status!** 
+
+#Installation
 You need a node.js install on Your server.
 http://nodejs.org/
 
@@ -16,6 +21,4 @@ sudo mount /dev/shm
 
 
 For more information see
-https://intern.churchtools.de/?q=churchwiki#WikiView/filterWikicategory_id:0/doc:ChurchLdap/
-~                                                                                                                                                                          
-~                                                                                                
+https://intern.churchtools.de/?q=churchwiki#WikiView/filterWikicategory_id:0/doc:ChurchLdap/     
