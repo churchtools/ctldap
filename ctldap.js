@@ -117,7 +117,7 @@ function loadCTUser(req, res, next) {
 //  else
   {
 
-    connection.query("SELECT id, cmsuserid, vorname, name, email, telefonhandy, plz, strasse, ort from cdb_person where cmsuserid!=''",
+    connection.query("SELECT id, cmsuserid, vorname, name, email, telefonhandy, telefonprivat, plz, strasse, ort from cdb_person where cmsuserid!=''",
     function(err, rows, fields) {
       if (err) throw err;
 
@@ -134,7 +134,8 @@ function loadCTUser(req, res, next) {
             nsuniqueid: rows[k].id,
             givenname: rows[k].vorname,
             street:rows[k].street,
-            telephoneNumber:rows[k].telefonhandy,
+            telephoneMobile: rows[k].telefonhandy,
+            telephoneHome: rows[k].telefonprivat,
             postalCode:rows[k].plz,
             l:rows[k].ort,
             sn: rows[k].name,
