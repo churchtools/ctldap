@@ -1,0 +1,14 @@
+{
+  "name": "ctldap",
+  "description": "LDAP Wrapper for ChurchTools",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "bunyan": "~0.22.1",
+    "ini": "~1.1.0",
+    "ldapjs": "~0.7.0",
+    "mysql": "~2.0.0"
+  },
+  "devDependencies": {
+  }
+}

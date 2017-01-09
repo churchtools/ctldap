@@ -10,8 +10,16 @@ var fs = require('fs');
 var ini = require('ini');
 var ct = require('./ctaccessor');
 
-var server = ldap.createServer();
 var ldap_config = ini.parse(fs.readFileSync('./ctldap.config', 'utf-8'));
+var server = null;
+if (ldap_config.pem_cert_filename) {
+  var pemCert = fs.readFileSync(ldap_config.pem_cert_filename, {encoding: "utf8"});
+  var pemKey = fs.readFileSync(ldap_config.pem_key_filename, {encoding: "utf8"});
+  server = ldap.createServer({certificate: pemCert, key: pemKey});
+}
+else {
+  var server = ldap.createServer();
+}
 ct.setOptions({"ct_host":ldap_config.ct_host, "ct_port":ldap_config.ct_port,
         "ct_protocol":ldap_config.ct_protocol, "ct_path":ldap_config.ct_path});
 if (ldap_config.debug) console.log("Debug mode is on!");
