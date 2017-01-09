@@ -1,4 +1,4 @@
-#CT-LDAP-Server v0.2
+#CT-LDAP-Server v0.3
 
 This product is a wrapper for ChurchTools, so ChurchTools can be used as a LDAP Server.
 
