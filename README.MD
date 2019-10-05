@@ -1,10 +1,12 @@
-#CT-LDAP-Server v0.3
+# CT-LDAP-Server v0.3
+
+This application is deprecated. Please use https://github.com/milux/ctldap/ if you need a ldap wrapper or contact support@churchtools.de for a hosted version of ldap.
 
 This product is a wrapper for ChurchTools, so ChurchTools can be used as a LDAP Server.
 
 **This product is currently in beta status!** 
 
-#Installation
+# Installation
 You need a node.js install on Your server.
 http://nodejs.org/
 
